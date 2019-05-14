@@ -1,5 +1,7 @@
 # b1u3-site
 
+running at https://b1u3-yumanoguchi.github.io/b1u3-vue-github/
+
 ## Project setup
 ```
 npm install
