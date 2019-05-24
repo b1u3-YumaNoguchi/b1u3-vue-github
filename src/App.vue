@@ -1,17 +1,15 @@
 <template>
-  <div id='app'>
-    <to-do />
+  <div>
+    <router-link to="/">top</router-link><br>
+    <router-link to="/about">about</router-link><br>
+    <router-link to="/contact">contact</router-link><br>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import ToDo from './components/ToDo.vue'
-
 export default {
   name: 'app',
-  components: {
-    ToDo,
-  }
 }
 </script>
 
