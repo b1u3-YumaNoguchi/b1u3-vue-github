@@ -1,8 +1,7 @@
 <template>
   <div>
     <router-link to="/">top</router-link><br>
-    <router-link to="/about">about</router-link><br>
-    <router-link to="/contact">contact</router-link><br>
+    <router-link to="/todo">simple-todo</router-link><br>
     <router-view></router-view>
   </div>
 </template>
