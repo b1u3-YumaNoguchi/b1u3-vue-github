@@ -6,6 +6,8 @@
     <ul><li>保存されません</li></ul>
     <hr>
     <h2>やること</h2>
+    <input v-model="value" />
+    <button @click="add">add</button>
     <ul> 
         <li v-for="item in todoList" :key="item.id">
             {{ item.value }}
@@ -23,16 +25,25 @@ export default {
             appName: 'ToDo',
             todoList: [
                 {
-                    id: 1, value: 'やること①',
+                    id: 0, value: 'やること①',
                 },
                 {
-                    id: 2, value: 'やること②',
+                    id: 1, value: 'やること②',
                 },
                 {
-                    id: 3, value: 'やること③',
+                    id: 2, value: 'やること③',
                 }
             ],
+            value: '',
         }
+    },
+    methods: {
+        add() {
+            if(this.value !== "") {
+                this.todoList.push({ id: this.todoList.length, value: this.value });
+                this.value = "";
+            }
+        },
     }
 }
 </script>
