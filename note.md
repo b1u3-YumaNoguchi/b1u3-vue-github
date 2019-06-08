@@ -1,5 +1,9 @@
 # 開発ノート
 
+## テストのドキュメント
+
+https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-unit-jest
+
 ## Babel と Webpack の違い
 * Webpackはモジュール化うんぬんかんぬんをやってくれるやつ
 * Babelは js のコンパイラ
