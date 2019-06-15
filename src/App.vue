@@ -4,7 +4,7 @@
     <router-link to="/todo">simple-todo</router-link><br>
     <router-link to="/now">now</router-link><br>
     <router-link to="/coindesk">bitcoin price index</router-link><br>
-    <router-view></router-view>
+    <router-view name="default"></router-view>
   </div>
 </template>
 

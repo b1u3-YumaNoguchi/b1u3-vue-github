@@ -8,15 +8,17 @@ import ConsumeAPI from './components/ConsumeAPI.vue'
 Vue.use(VueRouter);
 
 const routes = [
-    { path: '/', component: Top },
-    { path: '/todo', component: ToDo },
-    { path: '/now', component: Now },
-    { path: '/coindesk', component: ConsumeAPI },
+    { path: '/', components: { default: Top } },
+    { path: '/todo', components: { default: ToDo } },
+    { path: '/now', components: { default: Now } },
+    { path: '/coindesk', components: { default: ConsumeAPI } },
 ];
 
 const router = new VueRouter({
     routes,
-    mode: 'history'
+    mode: 'history',
+    // ここはvue.config.jsのpublicPathと同じにしておかなくてはならない
+    base: '/b1u3-vue-github/',
 });
 
 export default router;

@@ -1,5 +1,33 @@
 # 開発ノート
 
+## Vue router の使い方
+
+ネストさせずに同時に複数の view を表示したい時、名前付きビューが使える
+
+```javascript
+<router-view></router-view>//これはname="default"になっている
+<router-view name="main"></router-view>
+<router-view name="sidebar"></router-view>
+```
+
+1 つの view は 1 つのコンポーネントを使って描画される。
+
+```javascript
+const router = new VueRouter({
+  routes: [
+    {
+      path: '/',
+      // ここは、上の例で、view が 3 つあるからコンポーネントでこうなる
+      components: {
+        default: Foo,
+        a: Bar,
+        b: Baz
+      }
+    }
+  ]
+})
+```
+
 ## テストのドキュメント
 
 https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-unit-jest
