@@ -1,5 +1,45 @@
 # 開発ノート
 
+## Less あれこれ
+``` less
+// 変数
+@link-color: #428bca;
+@link-color-hover: darken(@link-color, 10%);
+
+// 変数の使用
+a,
+.link {
+  color: @link-color;
+}
+
+// 変数をセレクタとして使う
+@my-selector: abc;
+
+// class=abcが付いてるやつは全部適用
+.@{my-selector}{
+  ...
+}
+
+// url
+@image: "../imgs";
+
+.link {
+  // ""内で展開してくれるパターン
+  background: url("@{image}/white-sand.png");
+}
+
+
+```
+
+出典(http://lesscss.org/features/)
+
+
+## less のビルドの仕方
+
+自分のプロジェクトのビルドワークフローに従うなら、App.vueのscriptに変更を加える。
+
+> @import "node_modules/uikit/src/less/uikit.theme.less";
+
 ## Vue router の使い方
 
 ネストさせずに同時に複数の view を表示したい時、名前付きビューが使える
