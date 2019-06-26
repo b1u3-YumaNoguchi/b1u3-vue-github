@@ -6,27 +6,34 @@
         <h2 class="uk-heading-medium">b1u3's site</h2>
       </div>
       <div class="uk-navbar-right">
-        <span uk-icon="icon: menu; ratio: 2;" class="b1u3-menu"></span>
+        <ul class="uk-navbar-nav">
+          <li>
+            <a href="#" uk-icon="icon: menu; ratio: 2" style="color: #ffffff;"></a>
+            <div class="uk-navbar-dropdown">
+              <ul class="uk-nav uk-navbar-dropdown-nav">
+                <li>
+                  <router-link to="/">top</router-link>
+                </li>
+                <li>
+                  <router-link to="/todo">simple-todo</router-link>
+                </li>
+                <li>
+                  <router-link to="/now">now</router-link>
+                </li>
+                <li>
+                  <router-link to="/coindesk">bitcoin price index</router-link>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
       </div>
     </nav>
-    <router-link to="/">top</router-link><br>
-    <router-link to="/todo">simple-todo</router-link><br>
-    <router-link to="/now">now</router-link><br>
-    <router-link to="/coindesk">bitcoin price index</router-link><br>
-    <router-view name="default"></router-view>
+    <div id="content">
+      <router-view name="default"></router-view>
+    </div>
   </div>
-</template>
-
-<script>
-import UIkit from 'uikit';
-import Icons from 'uikit/dist/js/uikit-icons';
-
-UIkit.use(Icons);
-
-export default {
-  name: 'app',
-}
-</script>
+</template> 
 
 <style lang="less">
 @import "../node_modules/uikit/src/less/uikit.less";
@@ -44,20 +51,29 @@ https://www.color-hex.com/color-palette/27319
 @orange5: #ffed00;
 // ↓ 濃い
 
+.uk-icon {
+  color: #ffffff;
+}
 
-.uk-heading-medium, .b1u3-menu {
+.uk-heading-medium,
+.b1u3-menu {
   margin: 20px;
   color: #ffffff;
 }
 
-/*
-.uk-navbar-left, .uk-navbar-right, .b1u3-menu, .uk-navbar-center {
-  background-color: @orange4;
+#content {
+  margin: 20px;
 }
-*/
-
-nav.uk-navbar {
-  background-color: @orange4;
-}
-
 </style>
+
+<script>
+import UIkit from "uikit";
+import Icons from "uikit/dist/js/uikit-icons";
+
+UIkit.use(Icons);
+
+export default {
+  name: "app"
+};
+</script>
+
