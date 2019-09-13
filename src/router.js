@@ -1,3 +1,9 @@
+/* vim setting
+ * : set expandtab
+ * : set tabstop=4
+ * : set shiftwidth=4
+ * : set softtabstop=4
+ */
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Top from './components/Top.vue';

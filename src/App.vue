@@ -35,6 +35,15 @@
   </div>
 </template> 
 
+<!-- vim のメモ
+				expandtab : タブ入力をスペースに置き換え
+				tabstop : タブ文字が占める幅
+				shiftwidth : 数値
+				softtabstop : 連続した空白に対して、タブキーやバックスペースキーでカーソルが動く幅
+				autoindent : 改行時に前の行のインデントを継続する
+				smartindent : 改行時に入力された行の末尾に合わせて次の行のインデントを増減する
+-->
+
 <style lang="less">
 @import "../node_modules/uikit/src/less/uikit.less";
 
@@ -49,21 +58,19 @@ https://www.color-hex.com/color-palette/27319
 @orange3: #ffb646;
 @orange4: #ffa700;
 @orange5: #ffed00;
+@white: #ffffff;
 // ↓ 濃い
-
-.uk-icon {
-  color: #ffffff;
-}
 
 .uk-heading-medium,
 .b1u3-menu {
   margin: 20px;
-  color: #ffffff;
+  color: @white;
 }
 
 #content {
   margin: 20px;
 }
+
 </style>
 
 <script>
@@ -76,4 +83,3 @@ export default {
   name: "app"
 };
 </script>
-
